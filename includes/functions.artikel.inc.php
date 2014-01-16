@@ -3620,25 +3620,25 @@ function ReziseImage($Image,$NewSmallImageName, $NewBigImageName,$ImageType){
 		}
 
 
-		$NewImageRef = imagecreatetruecolor($NewImageWidth, $NewImageHeight);
-		if($ImageType == 'jpg'){
-			$NewImage = imagecreatefromjpeg($Image);
-		}elseif($ImageType == 'gif'){
-			$NewImage = imagecreatefromjpeg($Image);
-		}elseif($ImageType == 'png'){
-			$NewImage = imagecreatefromgif($Image);
-		}
-		imagecopyresampled($NewImageRef, $NewImage, 0, 0, 0, 0, $NewImageWidth, $NewImageHeight, $ImageSizeArray[0], $ImageSizeArray[1]);
+                $NewImageRef = imagecreatetruecolor($NewImageWidth, $NewImageHeight);
+                if($ImageType == 'jpg'){
+                        $NewImage = imagecreatefromjpeg($Image);
+                }elseif($ImageType == 'gif'){
+                        $NewImage = imagecreatefromgif($Image);
+                }elseif($ImageType == 'png'){
+                        $NewImage = imagecreatefrompng($Image);
+                }
+                imagecopyresampled($NewImageRef, $NewImage, 0, 0, 0, 0, $NewImageWidth, $NewImageHeight, $ImageSizeArray[0], $ImageSizeArray[1]);
 
 
-		if($ImageType == 'jpg'){
-			imagejpeg($NewImageRef, DATEIPFAD . "images/dbimages/" . $NewImageName, 85);
-		}elseif($ImageType == 'gif'){
-			imagegif($NewImageRef, DATEIPFAD . "images/dbimages/" . $NewImageName, 85);
-		}
-		elseif($ImageType == 'png'){
-			imagegif($NewImageRef, DATEIPFAD . "images/dbimages/" . $NewImageName, 85);
-		}
+                if($ImageType == 'jpg'){
+                        imagejpeg($NewImageRef, DATEIPFAD . "images/dbimages/" . $NewImageName, 85);
+                }elseif($ImageType == 'gif'){
+                        imagegif($NewImageRef, DATEIPFAD . "images/dbimages/" . $NewImageName, 85);
+                }
+                elseif($ImageType == 'png'){
+                        imagepng($NewImageRef, DATEIPFAD . "images/dbimages/" . $NewImageName);
+                }
 
 		imagedestroy($NewImage);
 		imagedestroy($NewImageRef);
