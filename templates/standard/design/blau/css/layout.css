@@ -1,0 +1,681 @@
+/* *********************** Grundinformationen *********************** */
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+	text-align: left;
+	min-width: 760px;
+	font-family: verdana, arial, "sans serif";
+	color: #333333;
+	font-size: 13px;
+	margin: 0;
+	padding: 0;
+    background-color: #e5e5e5;
+	/* background-image: 	url(../images/body_back.gif); */
+	/* background-repeat: 	repeat-x; */
+}
+
+.verlauf {
+    background: rgba(252,253,255,1);
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(252,253,255,1)), to(rgba(233,233,233,1)));
+    background: -moz-linear-gradient(center top , #FFFFFF, #E8E8E8);
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#ffffff, endColorstr=#E8E8E8);
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#ffffff, endColorstr=#E8E8E8)";
+    background-color: #e8e8e8;
+}
+
+/* *********************** Grunddesign, Header, Footer, Content *********************** */
+
+/* Kompletter Rahmen aussen */
+div.wrapper, header {
+    width: 980px;
+    position: relative;
+    margin: auto;
+    background-color: #ffffff;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 20px;
+}
+
+header {
+    height: 215px;
+    padding: 0;
+}
+
+header div.logoPosition, div.suchBox, div.warenkorbBox {
+    position: absolute;
+    left: 0px;
+    top: 30px;
+    z-index: 1;
+    width: 300px;
+    height: 125px;
+    overflow: hidden;
+    padding-top: 10px;
+    border: 1px solid #e5e5e5;
+    border-left: 0px;
+    text-align: center;
+}
+
+
+/* Hauptnavigation */
+div.mainNav {
+    width: 200px;
+    float: left;
+}
+
+/* 2. Spalte mit optional 2 Spalten fuer Content und 2. Navigation */
+div.content {
+    width: 760px;
+    float: right;
+}
+
+article.mainContent {
+    width: 565px;
+    min-height: 10px;
+    float: left;
+}
+
+article.checkoutContent {
+    width: 100%;
+}
+
+div.secondaryContent {
+    width: 180px;
+    float: right;
+}
+/* Ende 2. Spalte mit optional 2 Spalten fuer Content und 2. Navigation */
+
+/* optionale Klappnavigation */
+
+/* ************ Global Box für Klappnavigation *********** */
+div.mainNavTree {
+    margin-top: 0px;
+    height: 30px;
+    background: rgba(252,253,255,1);
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(252,253,255,1)), to(rgba(233,233,233,1)));
+    background: -moz-linear-gradient(center top , #FFFFFF, #E8E8E8);
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#ffffff, endColorstr=#E8E8E8);
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#ffffff, endColorstr=#E8E8E8)";
+    background-color: #E8E8E8;
+}
+
+/* ************ Erste Ebene ********** */
+div.mainNavTree ul, li {
+    list-style: none;
+}
+
+ul.mainNavTreeULTopLvl {
+    padding-left: 0px;
+}
+
+li.mainNavTreeLITopLvl {
+    float: left;
+    font-size: 15px;
+    line-height: 27px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-right: 1px solid #dfdfdf;
+}
+
+li.mainNavTreeLITopLvl a {
+    color: #4b4b4b;
+}
+
+/* ************ Aufklappebene 1 ************* */
+ul.mainNavTreeULSecLvl {
+    position: absolute;
+    display: none;
+    background: white;
+    border: 1px solid #cccccc;
+    box-shadow: 1px 1px 4px 1px #cccccc;
+    z-index: 100;
+}
+
+li.mainNavTreeLISecLvl {
+    padding-right: 10px;
+    padding-left: 10px;
+    font-size: 12px;
+    border-bottom: 1px solid #E8E8E8;
+}
+
+li.mainNavTreeLISecLvl a {
+    color: #4b4b4b;
+}
+
+li.mainNavTreeLISecLvl:hover {
+    color: #787878;
+    background-color: #E8E8E8;
+}
+
+/* ********* Visible der Klappnavigation ********* */
+.mainNavTree ul li:hover ul {
+    display: block;
+}
+
+
+
+/* ********** Aufklappebene 2 ************* */
+ul.mainNavTreeULThrdLvl {
+    padding-left: 10px;
+    font-size: 12px;
+}
+
+li.mainNavTreeLIThrdLvl a:hover {
+    text-decoration: underline;
+}
+
+
+
+footer {
+    display: block;
+    clear:				both;
+    z-index:			1;
+    padding: 10px;
+    padding-top: 20px;
+    padding-bottom:25px;
+    margin-bottom: 25px;
+    border-top: 1px solid #e5e5e5;
+}
+
+footer h4 a, footer h4 {
+    color: #000000;
+    font-size: 12px;
+}
+
+
+/********************** Standard Tag Informationen ********************/
+
+
+h1, h2, h3 {
+    font-size: 19px;
+    font-weight: normal;
+    margin-bottom: 15px;
+    background-color: #f6f6f6;
+    padding: 7px;
+    border-radius: 5px;
+    clear: both;
+}
+
+p {
+    padding: 10px;
+    padding-top: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #ff6900;
+}
+
+
+/* Formulare */
+form {
+    display:			inline;
+}
+
+fieldset {
+    padding:			5px;
+    border:				0px;
+}
+
+input {
+    border:				1px solid #D7DBDD;
+    background-color:	#ffffff;
+    font-size:			10px;
+    color:				#999999;
+}
+
+select {
+    border:				1px solid #6D808F;
+    background-color:	#ffffff;
+    font-size:			10px;
+    color:				#999999;
+}
+
+fieldset.content input.radio, input.radio {
+    border: 0px;
+    background-color: #ffffff;
+    width: 17px;
+    margin-top: 5px;
+    margin-right: 5px;
+    padding: 0;
+}
+
+/* *********************** Ende Grundinformationen *********************** */
+
+
+
+
+/* *********************** Aufbau Mein Konto *********************** */
+
+header ul.meinKonto {
+    list-style: none;
+    position: absolute;
+    right: 0;
+    top: 9px;
+}
+
+header ul.meinKonto li {
+    float: right;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-right: 1px solid #999999;
+    line-height: 10px;
+    font-size: 11px;
+}
+
+header ul.meinKonto li a {
+    color: #999999;
+}
+
+
+/* ********************** Info Menüpunkte ********************** */
+
+header nav.infoMenuePunkte ul {
+    position: absolute;
+    top: 175px;
+    left: 0px;
+    list-style: none;
+    width: 100%;
+    border-bottom: 1px solid #e5e5e5;
+    padding-bottom: 10px;
+}
+
+header nav.infoMenuePunkte ul li {
+    float: right;
+    margin-left: 25px;
+}
+
+header nav.infoMenuePunkte ul li a {
+    color: #999999;
+}
+
+
+/* *********************** Suche Formatierung *********************** */
+
+div.suchBox {
+    overflow: visible;
+    left: 300px;
+    width: 415px;
+}
+
+div.suchBox fieldset {
+    position: relative;
+    top: 20px;
+    left: 40px;
+    width: 300px;
+}
+
+div.suchBox fieldset small {
+    text-align: left;
+    display: block;
+    padding-left: 17px;
+    padding-top: 5px;
+}
+
+div.suchBox fieldset select {
+    width:				266px;
+    height:				18px;
+    margin-right:		5px;
+}
+
+div.suchBox fieldset input {
+    width:				230px;
+    height:				14px;
+}
+
+div.suchBox fieldset span input {
+    position: 			relative;
+    top:				2px;
+    width:				30px;
+    height:				18px;
+    margin-left:		4px;
+    margin-top:			-2px;
+    border:				0;
+    background-color:	transparent;
+    color:				#999999;
+    font-size:			16px;
+}
+
+/*********************** Aufbau Sprachen ************************* */
+
+div.sprachBox {
+    position:			absolute;
+    top:				9px;
+    left:				0px;
+}
+
+div.sprachBox a {
+    display:			block;
+    text-align:			left;
+    font-weight:		normal;
+    line-height:		17px;
+    font-size:			11px;
+    margin-right: 5px;
+    float: left;
+}
+
+/*********************** Aufbau Warenkorb ************************* */
+
+div.warenkorbBox {
+    width: 265px;
+    left: 715px;
+    background-image: 	url("../images/cart_24.png");
+    background-repeat: 	no-repeat;
+    background-position: 10px;
+    border-right: 0;
+    z-index: 0;
+}
+
+div.warenkorbBox div {
+    display: block;
+    padding-left: 84px;
+}
+
+div.warenkorbBox h5 {
+    padding-left:		25px;
+    margin:				0;
+    margin-bottom:		8px;
+    padding-top:		15px;
+    text-transform:		uppercase;
+    font-size:			14px;
+}
+
+div.warenkorbBox h4 {
+    display:			block;
+    text-indent:		10px;
+    text-align:			left;
+    font-weight:		normal;
+    line-height:		17px;
+    font-size:			11px;
+    margin:				0;
+}
+
+
+/* *********************** Aufbau Navigationslisten ******************** */
+
+.stammNavigation {
+    background: rgba(247,247,247,1);
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(247,247,247,1)), to(rgba(253,253,253,1)));
+    background: -moz-linear-gradient(center top , #F6F6F6, #FDFDFD);
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#F6F6F6, endColorstr=#FDFDFD);
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#F6F6F6, endColorstr=#FDFDFD)";
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.stammNavigation h4 {
+    padding-left: 10px;
+    font-weight: normal;
+    text-transform: uppercase;
+    font-size: 14px;
+    height: 35px;
+    line-height: 39px;
+    background: rgba(252,253,255,1);
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(252,253,255,1)), to(rgba(233,233,233,1)));
+    background: -moz-linear-gradient(center top , #FFFFFF, #E8E8E8);
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#ffffff, endColorstr=#E8E8E8);
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#ffffff, endColorstr=#E8E8E8)";
+    color: #666666;
+    background-color: #E8E8E8;
+}
+
+.stammNavigation ul {
+    list-style: none;
+}
+
+.stammNavigation ul li {
+    display: block;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-bottom: 1px dotted #dddddd;
+}
+
+.stammNavigation ul li a, .stammNavigation a {
+    color: #666666;
+}
+
+.stammNavigation ul li a:hover, nav.stammNavigation ul li.highlight a, nav.stammNavigation ul li.highlightSub a {
+    color:				#000000;
+}
+
+.stammNavigation ul li.secondNavigation {
+    padding-left: 15px;
+    line-height: 13px;
+    font-size: 11px;
+}
+
+.stammNavigation ul li.thirdNavigation {
+    padding-left: 25px;
+    font-size: 11px;
+}
+
+.stammNavigation fieldset select {
+    width: 180px;
+    margin-left: 5px;
+    height: 20px;
+    font-size: 12px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.stammNavigation p {
+    padding: 10px;
+}
+
+
+/* ********************* Eigene Definitionen der Navigationselemente ************** */
+
+/****** Zusatzboxen ****/
+
+.ExtraBoxLeft div, .ExtraBoxLeft div {
+    padding: 10px;
+    text-align: center;
+}
+
+
+/******* Bestsellerliste ******/
+
+div.bestsellerBox ol {
+    position: relative;
+    list-style-position: outside;
+    padding-left: 30px;
+    padding-right: 8px;
+    padding-bottom: 10px;
+}
+
+div.bestsellerBox ol li {
+    text-decoration: none;
+    text-align: left;
+    padding-bottom: 10px;
+    list-style: decimal;
+    margin-top: 5px;
+}
+
+div.bestsellerBox ol li strong {
+    display: block;
+}
+
+
+/********** Banner **********/
+
+.bannerPosition {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+
+/* ***************************** Facettensuche *************************** */
+
+div.facettensuche_filter {
+    padding-bottom: 10px;
+}
+
+div.facettensuche_filter_head {
+    display: block;
+    font-weight: bold;
+    text-indent: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 5px;
+}
+
+ul.facettensuche_filter_auspraegungen {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+li.facettensuche_auspraegung {
+    display: block;
+    text-indent: 10px;
+}
+
+.facettensuche_selected {
+    color: #000000;
+    font-weight: bold;
+}
+
+.facettensuche_fragezeichen {
+    left: 0px;
+    position: relative;
+    top: -75%;
+    width: 40px;
+    text-align: right;
+    cursor: default;
+}
+
+
+/* *********** Bewertungen Durchschnitt ********* */
+
+div.bewertungdurchschnitt div {
+    padding: 10px;
+}
+
+div.bewertungdurchschnitt div small, div.bewertungdurchschnitt div span, div.bewertungdurchschnitt div strong {
+    display: block;
+    text-align: center;
+    line-height: 1.8em;
+}
+
+
+/*************** Tooltip *************/
+
+.tooltip {
+    font-weight: bold;
+    float: right;
+}
+
+.tooltip .tooltiptext {
+    display:none;
+    background-color: #FFFFFF;
+    border: 7px solid #efefef;
+    font-weight: normal;
+    text-align: left;
+    text-decoration: none;
+    z-index: 500;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 3px 3px 8px 0px #AAAAAA;
+}
+.tooltip:hover .tooltiptext {
+    display: block;
+    position: absolute;
+    width: 200px;
+    left: 30px
+}
+
+
+/*********************** Aufbau Counter ************************* */
+
+footer div.counterBox {
+    width: 175px;
+    float: left;
+}
+
+div.counterBox h5 {
+    display:			block;
+    text-align:			left;
+    font-weight:		normal;
+    font-size:			11px;
+    line-height:		17px;
+    margin:				0;
+    padding:			0;
+    color:				#999999;
+}
+
+footer span.copy {
+    clear: both;
+    display: block;
+}
+
+/********************** Link Box **********************/
+
+div.linkBox {
+    width: 250px;
+    float: left;
+    padding-bottom: 20px;
+}
+
+/********************** Newsletter Box **********************/
+
+div.newsletterBox {
+    width: 270px;
+    float: left;
+}
+
+div.newsletterBox fieldset input, div.newsletterBox fieldset span input {
+    width: 220px;
+    height: 20px;
+    margin-bottom: 2px;
+}
+
+
+/**************************** Footer Navigation **************************/
+
+nav.navigationFooterBox {
+    width: 250px;
+    float: left;
+    padding-bottom: 20px;
+}
+
+nav.navigationFooterBox ul {
+    list-style:			none;
+}
+
+nav.navigationFooterBox ul li {
+    display: block;
+    font-size: 11px;
+}
+
+nav.navigationFooterBox ul li a {
+    color:				#999999;
+}
+
+nav.navigationFooterBox ul li a:hover {
+    color:				#000000;
+}
+
+/********** Footer Copy ***************/
+
+span.copy {
+    display: block;
+    border-top: 1px solid #e5e5e5;
+    text-align: right;
+    color: #999999;
+    line-height: 25px;
+    font-size: 11px;
+}
+
+span.copy a {
+    color: #999999;
+}
+
+
+
